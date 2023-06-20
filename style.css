@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1 {
+  margin: 0px;
+  padding: 0px;
+}
+
+img {
+  display: block;
+}
+
+.titulo {
+  text-align: center;
+  padding: 10px;
+}
+
+.linha {
+  display: flex;
+  justify-content: space-between;
+}
+
+.linha > .coluna {
+  padding: 5px;
+}
+
+.linha::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.coluna {
+  float: left;
+  width: 25%;
+}
+
+.img-mini {
+  width: 100%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 20px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #000000;
+}
+
+.modal-conteudo {
+  position: relative;
+  background-color: #c3c3c3;
+  margin: auto;
+  padding: 0px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.imagemSlide {
+  width: 100%;
+}
+
+.fechar {
+  color: #ffffff;
+  background-color: #000000;
+  padding: 5px 20px;
+  border-radius: 4px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  font-weight: 700;
+  z-index: 100;
+}
+
+.fechar:hover,
+.fechar:focus {
+  color: #c3c3c3;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.slides {
+  display: none;
+}
+
+.anterior,
+.proximo {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 4px 4px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.proximo {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.anterior:hover,
+.proximo:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.numero {
+  color: #c3c3c3;
+  font-weight: 700;
+  background-color: #000000;
+  border-radius: 0 0 4px 0;
+  font-size: 0.8rem;
+  padding: 10px 15px;
+  position: absolute;
+  top: 0;
+}
+
+.container-legenda {
+  text-align: center;
+  background-color: #000000;
+  padding: 5px 15px;
+  color: #c3c3c3;
+}
+
+.miniaturas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+img .thumbnail {
+  opacity: 0.6;
+}
+
+.ativo,
+.thumbnail:hover {
+  opacity: 1;
+}
+
+img .hover {
+  transition: 0.3s;
+}
+
+.hover:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.2s;
+}

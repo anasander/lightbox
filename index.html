@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lightbox</title>
+</head>
+
+<body>
+
+    <div class="titulo">
+        <h1>Lightbox</h1>
+        <p>Clique nas imagens para expandi-las e ler sua descrição.</p>
+    </div>
+
+    <div class="linha">
+        <div class="coluna">
+            <img class="hover img-mini" onclick="abrirModal(); slideAtual(1)" src="/img/cachorro-1.jpg" alt="Cachorros correndo">
+        </div>
+        <div class="coluna">
+            <img class="hover img-mini" onclick="abrirModal(); slideAtual(2)" src="/img/cachorro-2.jpg" alt="Cachorro curioso">
+        </div>
+        <div class="coluna">
+            <img class="hover img-mini" onclick="abrirModal(); slideAtual(3)" src="/img/cachorro-3.jpg" alt="Cachorro entre flores">
+        </div>
+        <div class="coluna">
+            <img class="hover img-mini" onclick="abrirModal(); slideAtual(4)" src="/img/cachorro-4.jpg" alt="Cachorro de coleira">
+        </div>
+        <div class="coluna">
+            <img class="hover img-mini" onclick="abrirModal(); slideAtual(5)" src="/img/cachorro-5.jpg" alt="Cachorro deitado">
+        </div>
+    </div>
+
+    <div id="lightbox" class="modal">
+        <span class="fechar pointer" onclick="fecharModal()">&times;</span>
+        <div class="modal-conteudo">
+            <div class="slides">
+                <div class="numero">1 / 5</div>
+                <img class="imagemSlide" src="/img/cachorro-1.jpg" alt="Cachorros correndo">
+            </div>
+            <div class="slides">
+                <div class="numero">2 / 5</div>
+                <img class="imagemSlide" src="/img/cachorro-2.jpg" alt="Cachorro curioso">
+            </div>
+            <div class="slides">
+                <div class="numero">3 / 5</div>
+                <img class="imagemSlide" src="/img/cachorro-3.jpg" alt="Cachorro entre flores">
+            </div>
+            <div class="slides">
+                <div class="numero">4 / 5</div>
+                <img class="imagemSlide" src="/img/cachorro-4.jpg" alt="Cachorro de coleira">
+            </div>
+            <div class="slides">
+                <div class="numero">5 / 5</div>
+                <img class="imagemSlide" src="/img/cachorro-5.jpg" alt="Cachorro deitado">
+            </div>
+
+
+            <a class="anterior" onclick="proximoSlide(-1)">&#10094;</a>
+            <a class="proximo" onclick="proximoSlide(1)">&#10095;</a>
+
+            <div class="container-legenda">
+                <p id="legenda"></p>
+            </div>
+
+            <div class="miniaturas">
+                <div class="coluna">
+                    <img class="thumbnail img-mini" onclick="slideAtual(1)" src="/img/cachorro-1.jpg" alt="Cachorros correndo">
+                </div>
+                <div class="coluna">
+                    <img class="thumbnail img-mini" onclick="slideAtual(2)" src="/img/cachorro-2.jpg" alt="Cachorro curioso">
+                </div>
+                <div class="coluna">
+                    <img class="thumbnail img-mini" onclick="slideAtual(3)" src="/img/cachorro-3.jpg" alt="Cachorro entre flores">
+                </div>
+                <div class="coluna">
+                    <img class="thumbnail img-mini" onclick="slideAtual(4)" src="/img/cachorro-4.jpg" alt="Cachorro de coleira">
+                </div>
+                <div class="coluna">
+                    <img class="thumbnail img-mini" onclick="slideAtual(5)" src="/img/cachorro-5.jpg" alt="Cachorro deitado">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
